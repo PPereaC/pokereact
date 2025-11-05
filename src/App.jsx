@@ -31,9 +31,11 @@ function App() {
   return (
     <>
 
-      <button onClick={fetchPokemons}>Cargar Pokemons</button>
+      <h1>Cartas Pokemons</h1>
 
-      <h1>Pokémon Cards</h1>
+      <button className="boton-pokemons" onClick={fetchPokemons}>Cargar Pokemons</button>
+
+      <br />
 
       <div className="pokemon-container">
         {pokemons.map((pokemon) => (
