@@ -35,14 +35,16 @@ function App() {
 
       <h1>Pokémon Cards</h1>
 
-      {pokemons.map((pokemon) => (
-        <PokemonCard
-          key={pokemon.name}
-          name={pokemon.name}
-          image={pokemon.image}
-          types={pokemon.types}
-        />
-      ))}
+      <div className="pokemon-container">
+        {pokemons.map((pokemon) => (
+          <PokemonCard
+            key={pokemon.name}
+            name={pokemon.name}
+            image={pokemon.image}
+            types={pokemon.types}
+          />
+        ))}
+      </div>
     </>
   )
 }
