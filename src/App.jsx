@@ -2,9 +2,18 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import PokemonCard from './components/pokemon_card.jsx';
 
 function App() {
   const [count, setCount] = useState(0)
+
+  fetch('https://pokeapi.co/api/v2/pokemon')
+    .then((data) => {
+      return data.json();
+    })
+    .then((pokemon) => {
+      console.log(pokemon.results[0]);
+    });
 
   return (
     <>
